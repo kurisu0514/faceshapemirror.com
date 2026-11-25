@@ -282,6 +282,7 @@ select:hover { border-color: var(--accent-deep); }
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  filter: grayscale(1) sepia(.29) saturate(1.28) hue-rotate(-24deg);
 }
 .outline.oval { background-image: url('./face-oval.webp?v=mannequin'); }
 .outline.round { background-image: url('./face-round.webp?v=mannequin'); }
