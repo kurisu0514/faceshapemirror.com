@@ -283,12 +283,12 @@ select:hover { border-color: var(--accent-deep); }
   background-repeat: no-repeat;
   background-size: contain;
 }
-.outline.oval { background-image: url('./face-oval.webp'); }
-.outline.round { background-image: url('./face-round.webp'); }
-.outline.square { background-image: url('./face-square.webp'); }
-.outline.heart { background-image: url('./face-heart.webp'); }
-.outline.diamond { background-image: url('./face-diamond.webp'); }
-.outline.oblong { background-image: url('./face-oblong.webp'); }
+.outline.oval { background-image: url('./face-oval.webp?v=mannequin'); }
+.outline.round { background-image: url('./face-round.webp?v=mannequin'); }
+.outline.square { background-image: url('./face-square.webp?v=mannequin'); }
+.outline.heart { background-image: url('./face-heart.webp?v=mannequin'); }
+.outline.diamond { background-image: url('./face-diamond.webp?v=mannequin'); }
+.outline.oblong { background-image: url('./face-oblong.webp?v=mannequin'); }
 .triangle-note { margin-top: 1.4rem; border-inline-start: 2px solid var(--accent); padding: .1rem 0 .15rem .85rem; }
 .triangle-note h3 { font-size: 1.55rem; }
 .triangle-note p { max-width: 64ch; margin-top: .45rem; }
