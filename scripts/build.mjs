@@ -1,5 +1,6 @@
 import { execFileSync } from 'node:child_process';
-import { cp, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { cp, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -87,7 +88,13 @@ const robots = ['User-agent: *', 'Allow: /', `Sitemap: ${sitemap}`, ''].join('\n
 
 await rm(output, { recursive: true, force: true });
 await cp(source, output, { recursive: true });
+const stylesheet = await readFile(join(source, 'assets', 'site.css'));
+const stylesheetVersion = createHash('sha256').update(stylesheet).digest('hex').slice(0, 12);
+const homepage = await readFile(join(source, 'index.html'), 'utf8');
 await Promise.all([
+  writeFile(join(output, 'index.html'), homepage.replace(
+    'href="/assets/site.css"', `href="/assets/site.css?v=${stylesheetVersion}"`,
+  )),
   writeFile(join(output, 'robots.txt'), robots),
   writeFile(join(output, 'sitemap.xml'), sitemapXml),
 ]);
