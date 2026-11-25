@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Face Shape Mirror | Find Your Face Shape</title>
+  <meta name="description" content="Compare your face length, cheekbones and jawline in a mirror, then explore haircut and styling ideas for the outline that fits you best.">
+  <meta name="theme-color" content="#f8f4ed">
+  <link rel="canonical" href="https://faceshapemirror.com/">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/mirror.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="/" aria-label="Face Shape Mirror home">
+        <span class="mirror-mark" aria-hidden="true"></span>
+        Face Shape Mirror
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#mirror-check">Mirror check</a>
+        <a href="#face-shapes">Face shapes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Find your <em>face shape.</em></h1>
+        <p class="hero-intro">Look at your reflection, compare a few features, and get haircut ideas you can try on or take to your stylist.</p>
+        <div class="hero-actions">
+          <a class="button" href="#mirror-check">Start the mirror check <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#face-shapes">Browse face shapes</a>
+        </div>
+        <p class="hero-note">All you need is a mirror. No photo or camera required.</p>
+      </div>
+      <figure class="hero-figure">
+        <div class="portrait">
+          <img src="/assets/mirror-portrait.webp" alt="Illustrative straight-on portrait with the hair pulled back, the forehead visible and shoulders level." width="960" height="720" fetchpriority="high">
+          <span class="measure-width" aria-hidden="true"></span>
+          <span class="measure-length" aria-hidden="true"></span>
+        </div>
+        <figcaption>Illustrative portrait · Compare cheekbone width with hairline-to-chin length.</figcaption>
+      </figure>
+    </section>
+
+    <section class="check-section" id="mirror-check" aria-labelledby="check-title">
+      <div class="shell check-grid">
+        <div class="check-guide">
+          <h2 id="check-title">Do a mirror check.</h2>
+          <p>Stand at eye level in even light and relax your jaw. Look at the outline of your face from the hairline to the chin.</p>
+          <ol class="feature-list">
+            <li><strong>Length</strong><span>Compare hairline to chin with the widest part of your face.</span></li>
+            <li><strong>Width</strong><span>Compare your forehead at the temples, your cheekbones and the sides of your jaw.</span></li>
+            <li><strong>Jawline</strong><span>Notice whether the sides curve, turn sharply or taper toward your chin.</span></li>
+          </ol>
+          <p class="check-note">If your features fit more than one outline, compare both in the guide below.</p>
+        </div>
+        <div class="check-panel">
+          <form id="shape-form" hidden>
+            <fieldset>
+              <legend>What do you see?</legend>
+              <label for="face-length">Face length compared with width</label>
+              <select id="face-length" name="length" required>
+                <option value="">Choose the closest match</option>
+                <option value="similar">About as long as it is wide</option>
+                <option value="longer">A little longer than it is wide</option>
+                <option value="long">Clearly longer than it is wide</option>
+                <option value="unsure">I'm not sure</option>
+              </select>
+              <label for="face-width">Widest part of your face</label>
+              <select id="face-width" name="width" required>
+                <option value="">Choose the closest match</option>
+                <option value="even">Forehead, cheekbones and jaw are close in width</option>
+                <option value="forehead">Forehead is widest</option>
+                <option value="cheeks">Cheekbones are widest</option>
+                <option value="jaw">Jaw is widest</option>
+                <option value="unsure">I'm not sure</option>
+              </select>
+              <label for="face-jaw">Jawline and chin</label>
+              <select id="face-jaw" name="jaw" required>
+                <option value="">Choose the closest match</option>
+                <option value="soft">Soft curve into the chin</option>
+                <option value="angle">Defined corners or a broad, straight lower edge</option>
+                <option value="taper">Narrows toward the chin</option>
+                <option value="unsure">I'm not sure</option>
+              </select>
+            </fieldset>
+            <button class="button" type="submit">See your closest match <span aria-hidden="true">→</span></button>
+          </form>
+          <noscript>
+            <p>Use the three observations above to compare the face shapes in the guide.</p>
+            <a class="text-link" href="#face-shapes">Read the shape guide</a>
+          </noscript>
+          <section class="check-result" id="shape-result" aria-labelledby="result-title" tabindex="-1" hidden>
+            <h3 id="result-title"></h3>
+            <p id="result-explanation"></p>
+            <ul id="result-links"></ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell shape-section" id="face-shapes" aria-labelledby="shapes-title">
+      <div class="section-intro">
+        <h2 id="shapes-title">Face shapes &amp; haircut ideas.</h2>
+        <p>Think about what you want the cut to do: add height, create width, or draw attention to the jaw or cheekbones. Use the ideas below as a starting point.</p>
+      </div>
+      <div class="shape-grid">
+        <article class="shape-card" id="oval">
+          <span class="outline oval" aria-hidden="true"></span>
+          <h3>Oval</h3>
+          <p>Longer than wide, with gently curved sides and a softly tapered jaw.</p>
+          <p><strong>Try</strong> soft layers that start around the cheekbones, or a bob that follows the jawline.</p>
+        </article>
+        <article class="shape-card" id="round">
+          <span class="outline round" aria-hidden="true"></span>
+          <h3>Round</h3>
+          <p>Length and width are close, with full cheeks and a softly curved jaw.</p>
+          <p><strong>Try</strong> layers that start below the chin or a little lift at the crown to add a vertical line.</p>
+        </article>
+        <article class="shape-card" id="square">
+          <span class="outline square" aria-hidden="true"></span>
+          <h3>Square</h3>
+          <p>Forehead, cheekbones and jaw are close in width, with a defined jaw angle.</p>
+          <p><strong>Try</strong> soft waves or long, face-framing layers if you want to soften the jawline.</p>
+        </article>
+        <article class="shape-card" id="heart">
+          <span class="outline heart" aria-hidden="true"></span>
+          <h3>Heart</h3>
+          <p>The upper face is broad and the jaw tapers toward a narrower chin.</p>
+          <p><strong>Try</strong> a chin-length bob or waves that add fullness around the lower half of the face.</p>
+        </article>
+        <article class="shape-card" id="diamond">
+          <span class="outline diamond" aria-hidden="true"></span>
+          <h3>Diamond</h3>
+          <p>The cheekbones stand out as the widest part. The forehead and jaw are narrower.</p>
+          <p><strong>Try</strong> a side-swept fringe or chin-length layers to bring attention above or below the cheekbones.</p>
+        </article>
+        <article class="shape-card" id="oblong">
+          <span class="outline oblong" aria-hidden="true"></span>
+          <h3>Oblong</h3>
+          <p>Noticeably longer than wide, often with a forehead and jaw of similar width.</p>
+          <p><strong>Try</strong> bangs or waves that add width at the sides if you want the face to look shorter.</p>
+        </article>
+      </div>
+      <aside class="triangle-note" id="triangle" aria-labelledby="triangle-title">
+        <h3 id="triangle-title">What if your jaw is widest?</h3>
+        <p>A broad jaw with a narrower forehead can be a triangle or pear outline. Try adding fullness at the temples or crown if you want to balance the jaw. Your hair texture, styling routine and preferences matter when you choose the cut.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="wordmark" href="/" aria-label="Face Shape Mirror home"><span class="mirror-mark" aria-hidden="true"></span>Face Shape Mirror</a>
+      <p>Shape references and styling guidance:
+        <a href="https://publications.mgcafe.uky.edu/sites/publications.ca.uky.edu/files/fcs2847.pdf">University of Kentucky Extension</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.hair.com/perfect-haircut-for-your-face-shape.html">Hair.com stylist guide</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
